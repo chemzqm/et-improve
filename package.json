@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "an improved template engine",
   "main": "index.js",
+  "browser": "./lib/browser.js",
   "directories": {
     "test": "test"
   },
