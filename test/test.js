@@ -1,7 +1,7 @@
 /*global describe, it*/
 /*eslint "quotes": 0*/
 var expect = require('expect.js')
-var et = require('../lib')
+var et = require('..')
 var path = require('path')
 
 describe('compile', function() {
