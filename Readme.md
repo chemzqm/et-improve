@@ -1,4 +1,6 @@
-# Et-improved
+# Et-improve
+
+[![Build Status](https://secure.travis-ci.org/chemzqm/et-improve.png)](http://travis-ci.org/chemzqm/et-improve)
 
 An improved javascript template engine.
 
