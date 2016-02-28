@@ -1,0 +1,29 @@
+{
+  "name": "et-improve",
+  "version": "0.0.1",
+  "description": "an improved template engine",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.3"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chemzqm/et-improve.git"
+  },
+  "keywords": [
+    "template"
+  ],
+  "author": "chemzqm@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chemzqm/et-improve/issues"
+  },
+  "homepage": "https://github.com/chemzqm/et-improve"
+}
