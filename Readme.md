@@ -41,7 +41,7 @@ You should use `_` to access base object.
 * `{{else}}` => `else {`
 * `{{/}}` => '}'
 
-__Make sure to use `{{/}}` to close tag__
+__Make sure to use `{{/}}` to close brackets__
 
 ## Example template
 
