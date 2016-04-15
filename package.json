@@ -1,6 +1,6 @@
 {
   "name": "et-improve",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "an improved template engine",
   "main": "./lib/index.js",
   "browser": "./lib/browser.js",

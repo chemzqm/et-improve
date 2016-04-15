@@ -83,3 +83,39 @@ describe('compile file', function () {
     expect(str).to.be('<html>\nHello javascript\n</html>\n')
   })
 })
+
+describe('support filters', function () {
+  it('should support single filter', function () {
+    var fn = et.compile('{{= _.x | number}}')
+    var str = fn({x: '1'}, {
+      number: function (val) {
+        return Number(val).toFixed(2)
+      }
+    })
+    expect(str).to.be('1.00')
+  })
+
+  it('should support filter with arguments', function () {
+    var fn = et.compile('{{= _.x | number 3}}')
+    var str = fn({x: '3.14145'}, {
+      number: function (val, n) {
+        return Number(val).toFixed(n)
+      }
+    })
+    expect(str).to.be('3.141')
+  })
+
+  it('should suppoert nested filters', function () {
+    var fn = et.compile('{{= _.x | number 3 | reverse}}')
+    var str = fn({x: '3.14145'}, {
+      number: function (val, n) {
+        return Number(val).toFixed(n)
+      },
+      reverse: function (n) {
+        var str = String(n)
+        return str.split(/\s*/).reverse().join('')
+      }
+    })
+    expect(str).to.be('141.3')
+  })
+})
