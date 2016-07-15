@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/chemzqm/et-improve/master.svg?style=flat-square)](http://travis-ci.org/chemzqm/et-improve)
 
-An javascript template engine designed to make complex render easy and precise white user friendly.
+An javascript template engine designed to make complex render easy and precise while user friendly.
 
 There's also a webpack loader [ei-loader](https://www.npmjs.com/package/ei-loader) to help load compiled function directly.
 
