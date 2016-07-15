@@ -2,11 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/chemzqm/et-improve/master.svg?style=flat-square)](http://travis-ci.org/chemzqm/et-improve)
 
-An improved javascript template engine.
-
-The design philosophy is to make syntax simple and complex render precise .
-
-It 's not desinged for compile speed, but for user friendly.
+An javascript template engine designed to make complex render easy and precise white user friendly.
 
 There's also a webpack loader [ei-loader](https://www.npmjs.com/package/ei-loader) to help load compiled function directly.
 
@@ -22,9 +18,9 @@ could be add to `.vimrc` for html syntax and plugin support of files with `et` s
 ![](http://7xrnd0.com1.z0.glb.clouddn.com/5mxgwipm6d)
 * Works on both client and server side.
 * No `eval` and `with`, strict mode friendly.
-* Simple javascript code transition, no need to learn too much.
+* Simple javascript code transition, no need to learn much.
 * Support filters object (with arguments and/or chained), see [test](https://github.com/chemzqm/et-improve/blob/master/test/test.js)
-* Render precisely, every white space charactor is keeped.
+* Render precisely, every white space charactor is keeped unless line only contains controll script.
 
 ## Api
 
@@ -34,7 +30,7 @@ Compile template string to function with optional option.
 
 * *option.debug* enable debug mode when true
 
-The compiled function have syntax like `function (data, [filters], [escape])`,
+The compiled function have syntax as `function (data, [filters], [escape])`,
 
 * `deta` is a required javascript plain object
 * `filters` is optional object with key as filter name and value as filter function
@@ -44,9 +40,9 @@ __template should not contain include syntax__
 
 ### .compileFile(file, [option])
 
-This API only exist on `node` environment.
-
 Compile a file with optional option.
+
+This API only exist on `node` environment.
 
 * *option.debug* enable debug mode when true
 
