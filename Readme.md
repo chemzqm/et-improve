@@ -4,34 +4,42 @@
 
 An improved javascript template engine.
 
-The design philosophy is to make syntax simple and complex render easily.
+The design philosophy is to make syntax simple and complex render precise .
 
-It 's not desinged for compile speed, but for user friendly you should always use reusable function.
+It 's not desinged for compile speed, but for user friendly.
+
+## Features
+
+* Easy to debug, friendly error is thown on compile when possible.
+![](http://7xrnd0.com1.z0.glb.clouddn.com/5mxgwipm6d)
+* Works on both client and server side.
+* No `eval` and `with`, strict mode friendly.
+* Simple javascript code transition, no need to learn too much.
+* Support filters object (with arguments and/or chained), see [test](https://github.com/chemzqm/et-improve/blob/master/test/test.js)
 
 ## Api
 
-Only compile API exists, a function is retuened and it could called to get
-result string with `data object` and optional `escape function`
-
 ### .compile(template, [option])
 
-Compile template string with optional option.
+Compile template string to function with optional option.
 
 * *option.debug* enable debug mode when true
+
+The compiled function could be called with data object and an optional filter object, the third argument is escape function, overwrite it if you're  not rendering html.
 
 __template should not contain include syntax__
 
 ### .compileFile(file, [option])
 
+This API only exist on `node` environment.
+
 Compile a file with optional option.
 
 * *option.debug* enable debug mode when true
 
-__file content could contain include syntax__
-
 ## Template syntax
 
-You should use `_` to access base object.
+You could only use `_` to access base object.
 
 * `{{= _.data}}` => `str += escape(_.data)`
 * `{{! _.data}}` => `str += _.data`
