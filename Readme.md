@@ -25,7 +25,11 @@ Compile template string to function with optional option.
 
 * *option.debug* enable debug mode when true
 
-The compiled function could be called with data object and an optional filter object, the third argument is escape function, overwrite it if you're  not rendering html.
+The compiled function have syntax like `function (data, [filters], [escape])`,
+
+* `deta` is a required javascript plain object
+* `filters` is optional object with key as filter name and value as filter function
+* `escape` optional escape function which overwrite default escape function for html output.
 
 __template should not contain include syntax__
 
