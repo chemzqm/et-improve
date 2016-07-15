@@ -8,6 +8,14 @@ The design philosophy is to make syntax simple and complex render precise .
 
 It 's not desinged for compile speed, but for user friendly.
 
+There's also a webpack loader [ei-loader](https://www.npmjs.com/package/ei-loader) to help load compiled function directly.
+
+For vim user:
+
+    autocmd BufNewFile,BufRead *.et set filetype=html
+
+could be add to `.vimrc` for html syntax and plugin support of files with `et` suffix.
+
 ## Features
 
 * Easy to debug, friendly error is thown on compile when possible.
@@ -16,6 +24,7 @@ It 's not desinged for compile speed, but for user friendly.
 * No `eval` and `with`, strict mode friendly.
 * Simple javascript code transition, no need to learn too much.
 * Support filters object (with arguments and/or chained), see [test](https://github.com/chemzqm/et-improve/blob/master/test/test.js)
+* Render precisely, every white space charactor is keeped.
 
 ## Api
 
