@@ -10,6 +10,11 @@ describe('compile', function() {
     expect(fn()).to.be('')
   })
 
+  it('should support backslash', function () {
+    var fn = et.compile('/^\\/app')
+    expect(fn()).to.be('/^\\/app')
+  })
+
   it('should works with simple string', function () {
     var fn = et.compile("a='abc'\nb")
     expect(fn()).to.be("a='abc'\nb")
