@@ -63,7 +63,7 @@ __Make sure to use `{{/}}` to close brackets__
 ## Example template
 
 ``` html
-{{include ./head.html}}
+{{include ./head.et}}
 {{each _.users as user, i}}
   {{if user.valid}}
     <div>{{= user.image}}</div>
@@ -80,7 +80,7 @@ __Make sure to use `{{/}}` to close brackets__
     <div>invalid user</div>
   {{/}}
 {{/}}
-{{include ./foot.html}}
+{{include ./foot.et}}
 ```
 ## License
 

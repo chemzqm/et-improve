@@ -1,0 +1,3 @@
+{{include ./head.et}}
+{{= _.data}}
+{{include ./foot.et}}

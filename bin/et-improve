@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+
+var et = require('../')
+var args = process.argv
+var file = args[args.length - 1]
+
+var debug = args.indexOf('-d') !== -1
+var prefix = args.indexOf('-e') !== -1
+
+if (!file) {
+  console.log('file argument required')
+  process.exit()
+}
+
+var fn = et.compileFile(file, {
+  debug: debug
+})
+
+if (prefix) {
+  process.stdout.write('export default ')
+}
+console.log(fn.toString())

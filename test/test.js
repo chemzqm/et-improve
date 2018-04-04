@@ -87,6 +87,12 @@ describe('compile file', function () {
     var str = fn({data: 'Hello javascript'})
     expect(str).to.be('<html>\nHello javascript\n</html>\n')
   })
+
+  it('should compile nested include file', function () {
+    var fn = et.compileFile(path.join(__dirname, './templates/index.et'))
+    var str = fn({data: 'Hello javascript', title: 'hello'})
+    expect(str).to.be('<html>\n<head>\n<title>hello</title>\n</head>\nHello javascript\n</html>\n')
+  })
 })
 
 describe('support filters', function () {
